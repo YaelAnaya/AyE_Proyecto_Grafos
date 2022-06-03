@@ -3,9 +3,11 @@ import java.util.stream.Collectors;
 
 public class Graph <T>{
     private ArrayList<Vertex<T>> adjacentList;
+    private List<Integer> degreesSequence;
 
     public Graph(){
         this.adjacentList = new ArrayList<>();
+
 
     }
 

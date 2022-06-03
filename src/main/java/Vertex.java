@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -6,17 +6,19 @@ public class Vertex <T>{
     private T value;
     private List<Vertex<T>> adjacent;
     private boolean visited;
+    private int vertex_ID;
     private int degree;
 
     public Vertex(T value){
         this.value = value;
         this.adjacent = new LinkedList<>();
+        this.visited = false;
     }
 
-    public Vertex(T value, int degree){
+    public Vertex(T value, int vertex_ID){
         this.value = value;
+        this.vertex_ID = vertex_ID;
         this.adjacent = new LinkedList<>();
-        this.degree = degree;
     }
 
     public T getValue(){
@@ -42,14 +44,6 @@ public class Vertex <T>{
 
     public String toString(){
         return this.value.toString();
-    }
-
-    public int getDegree(){
-        return this.degree;
-    }
-
-    public void setDegree(int degree){
-        this.degree = degree;
     }
 
 }
